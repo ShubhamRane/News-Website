@@ -1,0 +1,170 @@
+<!Doctype Html>
+<html>
+<head>
+	<title>SamplePage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3_css/w3.min.css"></style>
+	<link rel="stylesheet" href="slideshow.css"></style>
+</head>
+
+<body>
+	<!--Side navigation bar for desktop--><!-- drawer for mobiles -->
+	<nav>
+
+		<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-right w3-top" style="z-index:3;width:280px" id="sidebar">
+			<div class="w3-container w3-display-container w3-padding-16">
+				<i onclick="w3_close()" class="w3-hide-large w3-button w3-display-topright">
+					<img src="media/remove.svg" class="w3-icon" style="max-width:15px"></img>
+				</i>
+
+				<!-- Site Name and Logo -->
+
+				<div class="w3-container"><img src="media/a.png" alt="Logo" class="w3-image w3-margin w3-hide-small"></div>
+
+						<!-- Accordion Menu 0 -->
+						<div class="w3-bar-item w3-red w3-hover-shadow w3-margin-top" onclick="myAccFunc(0)">
+							<i class="w3-icon"><img src="media/monitor.svg"></i>
+							<span class="w3-margin-left w3-sans-serif "><b><i>General</i></b></span>
+							<i class="w3-icon w3-right"><img src="media/menu-down.svg"></i>
+						</div>
+						<!-- Accordion Sub Menu 0-->
+						<div id="acc0" class="w3-hide w3-white w3-animate-left w3-shadow w3-round-xxlarge"></div>
+
+						<!-- Accordion Menu 1 -->
+						<div class="w3-bar-item w3-green w3-hover-shadow w3-margin-top" onclick="myAccFunc(1)">
+							<i class="w3-icon"><img src="media/run.svg"></i>
+							<span class="w3-margin-left w3-sans-serif"><b><i>Sports</i></b></span>
+							<i class="w3-icon w3-right"><img src="media/menu-down.svg"></i>
+						</div>
+						<!-- Accordion Sub Menu 1 -->
+						<div id="acc1" class="w3-hide w3-white w3-animate-left w3-card-2"></div>
+
+						<!-- Accordion Menu 2 -->
+						<div class="w3-bar-item w3-yellow w3-hover-shadow w3-margin-top" onclick="myAccFunc(2)">
+							<i class="w3-icon"><img src="media/filmstrip.svg"></i>
+							<span class="w3-margin-left w3-sans-serif"><b><i>Films</i></b></span>
+							<i class="w3-icon w3-right"><img src="media/menu-down.svg"></i>
+						</div>
+						<!-- Accordion Sub Menu 2 -->
+						<div id="acc2" class="w3-hide w3-white w3-animate-left w3-card-2"></div>
+
+
+						<!-- Accordion Menu 3 -->
+						<div class="w3-bar-item w3-blue w3-hover-shadow w3-margin-top" onclick="myAccFunc(3)">
+							<i class="w3-icon"><img src="media/treasure-chest.svg"></i>
+							<span class="w3-margin-left w3-sans-serif"><b><i>Business</i></b></span>
+							<i class="w3-icon w3-right"><img src="media/menu-down.svg"></i>
+						</div>
+						<!-- Accordion Sub Menu 3 -->
+						<div id="acc3" class="w3-hide w3-white w3-animate-left w3-card-2"></div>
+
+
+			</div>
+		</div>
+	</nav>
+
+	<!--Main Content-->
+	<main class="w3-main" style="margin-left:280px">
+
+		<!-- <header class="w3-bar w3-container  w3-top w3-card w3-white w3-xlarge">
+
+			<div class="w3-hide-small w3-hide-medium w3-right w3-teal" style="width:280px"></div>
+				<p class="w3-right w3-bar-item">
+				</p>
+		</header> -->
+		<header class="w3-container w3-card  w3-white">
+
+			 <a href="#" class="w3-padding-24 w3-right w3-hide-large" onclick="w3_open()">
+				 <img src="media/hamburger.svg"></img>
+			 </a>
+
+			 <div class="w3-padding-16 w3-center">
+				<h2 class="w3-sans-serif w3-text-blue w3-hover-opacity"><b>Wizard News</b></h2>
+			 </div>
+
+			 <p class="w3-right w3-hide">
+				 <i class="w3-icon w3-hover-blue w3-circle"><img src="media/tweet.png"></img></i>
+				 <i class="w3-icon w3-hover-indigo w3-circle"><img src="media/fb.png"></img></i>
+				 <i class="w3-icon w3-hover-red w3-circle"><img src="media/quo.png"></img></i>
+				 <i class="w3-icon w3-hover-pink w3-circle"><img src="media/pin.png"></img></i>
+			 	</p>
+ 		</header>
+
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!--navbar for mobiles-->
+		<!--header part-->
+		<!--Main news slideshow-->
+		<div class="w3-margin">
+
+			<div class="slideshow-container" style='width:100%'>
+
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="media/bolt.jpg" style="width:100%">
+					<div class="text"><h2 class="w3-serif w3-black">Sports</h2></div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="media/trump.jpg" style="width:100%">
+					<div class="text"><h2 class="w3-serif">Politics</h2></div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="media/mark.jpg" style="width:100%">
+					<div class="text"><h2 class="w3-serif">Social Media</h2></div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+		</div>
+
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+
+		<!--News cards-->
+		<!-- <button onclick="loadCategory(1)">Click me</button> -->
+		<!-- <button onclick="cleanArea()">Clear Area</button> -->
+
+		<!--  bottom bar for larger screens -->
+		<div class="w3-bottom w3-card w3-hide-small w3-hide-medium">
+			<div class="w3-cell w3-right" style="margin-right:280px">
+				<p class="w3-margin">
+				 <i class="w3-icon w3-hover-blue w3-circle"><img src="media/tweet.png"></img></i>
+				 <i class="w3-icon w3-hover-indigo w3-circle"><img src="media/fb.png"></img></i>
+				 <i class="w3-icon w3-hover-red w3-circle"><img src="media/quo.png"></img></i>
+				 <i class="w3-icon w3-hover-pink w3-circle"><img src="media/pin.png"></img></i>
+				</p>
+			</div>
+		</div>
+
+		<!-- news card are generated dynamically by javascript -->
+		<div id="try"></div>
+
+	</main>
+
+	<script src="slideshow_script.js" type="text/javascript"></script>
+	<script src="news_script.js" type="text/javascript"></script>
+	<script src="sidebar_list.js" type="text/javascript"></script>
+	<!-- script for sidebar -->
+	<script>
+		function w3_open() {
+			document.getElementById("sidebar").style.display="block";
+		}
+		function w3_close() {
+			document.getElementById("sidebar").style.display="none";
+		}
+	</script>
+
+
+</body>
+</html>
